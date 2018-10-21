@@ -97,8 +97,9 @@ class AdminLoginController extends Controller
     {
 
         if (auth()->guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
-
-            dd(auth()->guard('admin')->user());
+            //dd(auth()->guard('admin')->user());
+            //echo "hiiii";
+            //return view('admin.admin-panel');
 
         }
 

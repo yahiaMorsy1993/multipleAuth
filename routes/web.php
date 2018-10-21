@@ -15,8 +15,12 @@
 
 Auth::routes();
 
+Route::get('/','Auth\LoginController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin-login', 'Auth\AdminLoginController@showLoginForm');
 
 Route::post('admin-login', ['as'=>'admin-login','uses'=>'Auth\AdminLoginController@login']);
+
+Route::get('/submission','SubmissionController@index');
+Route::post('/saved','SubmissionController@save');
